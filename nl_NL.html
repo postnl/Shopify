@@ -1,0 +1,277 @@
+﻿<script src="js/auto_menu.js" xmlns="http://www.w3.org/1999/html"></script>
+<div class="container-fluid">
+    <div class="row">
+        <div class="menu col-xs-4 col-lg-3">
+            <nav class="navbar nav nav-pills nav-stacked">
+                <div class="menu-items">
+                </div>
+            </nav>
+        </div>
+        <section class="page-header col-xs-8 col-xs-offset-4 col-lg-9 col-lg-offset-3">
+            <section class="col-xs-5 col-xs-offset-5 col-lg-9 col-lg-offset-1">
+                <img class="image-header-postnl-logo" alt="PostNL logo" src="media/PostNL-logo.png">
+            </section>
+            <br/>
+        </section>
+        <section class="main-content col-xs-8 col-xs-offset-4 col-lg-7 col-lg-offset-4">
+            <h1 class="project-name">Handleiding Shopware 6 <b>PostNL Shipping & Labels</b></h1>
+            <div style="margin-top:10px">
+                <h1 id="1">1. Installeer de PostNL-extensie</h1>
+                <p>
+                    Via de GitHub van PostNL kan de Shopware plug-in van PostNL gedownload worden. 
+                    Ga naar onze <a href="https://github.com/postnl/shopware">GitHub</a> > Klik rechtsboven in het scherm op <span class="nice">Code</span> en vervolgens 
+                    <span class="nice">Download ZIP</span>. 
+                </p>
+                
+                <img class='center-large-image' alt="" src="media/PostNL GitHub Installatie.jpg">
+                
+                <p>                
+                Ga in de backoffice van jouw Shopware 6 omgeving naar <span class="nice">Extensies > Mijn Extensies</span> en klik rechtsboven 
+                op <span class="nice">Upload extensie</span>. Open het ZIP-bestand dat zojuist is gedownload. De PostNL plug-in is nu 
+                geïnstalleerd, maar nog niet geactiveerd. Ga naar <span class="nice">Mijn extensies</span> en activeer de PostNL plug-in 
+                door het schuifje naar rechts te schuiven.
+                </p>
+                
+                <img class='center-large-image' alt="PostNL-installatie" src="media/PostNL-installatie.png">
+
+                <h1 id="2">2. Verzendwijzen activeren</h1>
+                <h2 id="2_1">2.1. Algemeen</h2>
+
+                <p>Voordat wij de extensie configureren is het belangrijk om de zendingen van PostNL te activeren.</p>
+                <p>
+                    Ga naar <span class="nice">Instellingen → Verzending</span>. ‘PostNL standard shipping’ en ‘Pick up at
+                    PostNL point’ zijn de verzendwijzen die geactiveerd moeten worden.
+                    Klik op de drie puntjes achter ‘PostNL standard shipping’ → Bewerken → Zet het schuifje
+                    bij 'Actief' naar rechts en sla de wijziging op. Herhaal dit ook voor ‘Pick up
+                    at PostNL point’. Beide verzendwijzen zijn nu geactiveerd. 
+                </p>
+
+
+                <img class='center-large-image' alt="" src="media/PostNL-basisinformatie.png">
+                <img class='center-large-image' alt="" src="media/PostNL-instellingen-verzending.png">
+
+                <h2 id="2_2">2.2 Per verkoop kanaal</h2>
+                <p>
+                    Klik in het Shopware menu op <span class="nice">Verkoop kanalen</span>. Klik op het verkoop kanaal waarvoor
+                    je de PostNL-verzendwijzen wilt activeren. Scrol bij de algemene instellingen naar
+                    <span class="nice">Betalen & verzending</span>. Klik op het pijltje naar beneden achter verzendwijzen en voeg de
+                    verzendwijzen van PostNL hier aan toe.
+                </p>
+                <p>
+                    Wil je één van de verzendwijzen van PostNL instellen  als standaard verzendwijze?
+                    Selecteer deze verzendwijze dan bij <span class="nice">Default shipping method</span>.
+                    We kunnen nu de extensie configureren.
+                </p>
+
+                <img class='center' alt="" src="media/PostNL-betaling-verzending.png">
+
+                <h1 id="3">3 Configureren van de extensie</h1>
+                <p>
+                    Klik in het <span class="nice">Mijn extensies</span> menu, recht op de drie puntjes achter de
+                    PostNL plug-in.
+                    Klik vervolgens op <span class="nice">configuratie</span>.
+                </p>
+
+                <h2 id="3_1">Verkoopkanaal</h2>
+                <p>
+                    Het verkoopkanaal geeft aan op welk verkoopkanaal jouw instellingen van de PostNL
+                    extensie zichtbaar zijn. Kies hier het gewenste verkoopkanaal.
+                </p>
+                <h2 id="3_2">Account Instellingen</h2>
+                <p>
+                    Vul in het blok <span class="nice">Account Instellingen</span> de klantgegevens in die je van PostNL hebt
+                    ontvangen. Deze gegevens vind je in jouw <a href="https://mijn.postnl.nl/c/BP2_Mod_Login.app?inresponseto=&amp;RelayState=&amp;startURL=%2F">Zakelijke PostNL</a>
+                    omgeving onder <span class="nice">Mijn Account → API beheren</span>. De velden onder
+                    <span class="nice">Klantgegevens</span> zijn verplicht. Zorg dat deze velden zijn ingevuld.
+                </p>
+                <p>Met de knop <span class="nice">Test API Sleutels</span> controleer je of de gegevens juist zijn ingevoerd.</p>
+                <p>Vergeet niet om tussendoor de wijzigingen op te slaan. Doe dit ook nadat de configuratie is afgerond.</p>
+
+                <img class='center' alt="" src="media/PostNL-account-instellingen.png">
+
+                <h2 id="3_3">Adresgegevens</h2>
+                <p>
+                    Vul in het blok <span class="nice">Adresgegevens</span> de gegevens van jouw webshop in. De
+                    bedrijfsnaam en
+                    de adresgegevens zijn straks zichtbaar op de geprinte verzendlabels en in de online
+                    track & trace-gegevens.
+                </p>
+
+                <img class='center' alt="" src="media/PostNL-adresgegevens.png">
+
+                <p>Je hoeft je retouradres hieronder alléén in te vullen als je deze dienst contractueel afneemt bij PostNL Pakketten.</p>
+                <p>
+                    Vul bij <span class="nice">Retour adres</span> de retourgegevens van jouw webshop in. De
+                    retour-klantcode is terug te vinden in jouw
+                    <a href="https://mijn.postnl.nl/c/BP2_Mod_Login.app?inresponseto=&amp;RelayState=&amp;startURL=%2F">Zakelijke PostNL</a>
+                    omgeving onder <span class="nice">Mijn Account → API beheren</span>.
+                    Sla tussentijds, of na het afronden van de configuratie, de wijzigingen op.
+                </p>
+
+                <img class='center' alt="" src="media/PostNL-retour-intsellingen.png">
+
+                <h2 id="3_4">Standaard verzendproducten</h2>
+                <p>
+                    Selecteer bij de <span class="nice">Standaard verzendproducten</span> de verzendmethoden van
+                    PostNL in die je
+                    standaard wilt gebruiken voor de zendingen.
+                </p>
+                <p>
+                    Voor zendingen binnen Nederland en naar België kun je er ook voor kiezen om een alternatieve
+                    verzendmethode te activeren. Hiermee activeer je voor zendingen boven een bepaald bedrag een 
+                    andere verzendmethode dan voor zendingen onder dit bedrag.
+                </p>
+                <p>
+                    Activeer de opties <span class="nice">Zendingen naar Europa inschakelen</span> en/of <span class="nice">Zendingen naar de rest
+                    van de wereld inschakelen</span> als je de verzendproducten van
+                    PostNL binnen en/of buiten Europa wilt gebruiken.
+                </p>
+
+                <img class='center' alt="" src="media/PostNL-standaard-verzendproducten.png">
+
+                <h2 id="3_5">Wereld</h2>
+                <p>
+                    Kies je ervoor om ook naar landen buiten Europa te versturen? Vul dan een standaard
+                    GS-tarief code in. <b>Het is verplicht om de GS-tarief code per product in te vullen</b>. Dit
+                    doe je in jouw Shopware-omgeving bij <span class="nice">Catalogus → Producten → Specificaties</span>.
+                    De GS-code vind je op de site van de Nederlandse Kamer van Koophandel.
+                </p>
+                <p>
+                    Ook de afmetingen, het gewicht en het land van herkomst zijn verplicht voor zendingen
+                    buiten Europa. Deze gegevens zijn nodig voor de douaneformulieren. Deze
+                    gegevens vul je ook in bij de <span class="nice">Producten-instellingen</span> van Shopware.
+                </p>
+                <p>Sla tussentijds, of na het afronden van de configuratie, de wijzigingen op.</p>
+                <img class='center-large-image' alt="" src="media/PostNL-wereld-instellingen.png">
+                <img class='center-large-image' alt="" src="media/PostNL-wereld-instellingen-aangepaste-velden.png">
+
+                <h2 id="3_6">Adres check</h2>
+                <p>
+                    Als je de adrescheck activeert,  worden Nederlandse adressen in de check-out van de 
+                    webshop gevalideerd op basis van de combinatie postcode en huisnummer. Deze dienst 
+                    bieden we gratis aan.
+                </p>
+                <img class='center-large-image ' alt="" src="media/PostNL-adres-check.png">
+
+                <h2 id="3_7">Retourlabel</h2>
+                <p>
+                    Het is mogelijk om tegelijk met het aanmaken van de verzendlabels van de heen-zending
+                    een label voor de retour-zending te maken. Het retourlabel kan in het pakket van de
+                    heen-zending gestopt worden zodat de consument het retourlabel niet zelf hoeft te
+                    printen.
+                </p>
+
+                <img class='center-large-image' alt="" src="media/PostNL-retour-label.png">
+
+                <h2 id="3_8">Labelformat</h2>
+                <p>
+                    Gebruik je een label-printer? Zorg dan dat het label-formaat is ingesteld op A6.
+                    Voor normale printers kun je het A4-formaat gebruiken. Verzend-labels
+                    voor zendingen buiten Europa worden altijd geprint op een A4-formaat.
+                </p>
+                <img class='center-large-image' alt="" src="media/PostNL-labelformat.png">
+
+                <h2 id="3_9">Technische instellingen</h2>
+                <p>
+                    Wordt de <span class="nice">Debug mode</span> geactiveerd? Dan worden er meer gegevens gelogd. Dit kun
+                    je gebruiken om mogelijke problemen te diagnosticeren.
+                </p>
+
+                <h1 id="4">4. Aanmaken van verzendlabels</h1>
+                <h2 id="4_1">4.1 Orderoverzicht</h2>
+                <p>
+                    Open het PostNL-order overzicht door in het Shopware-menu naar <span class="nice">Bestellingen 
+                    → PostNL bestellingen</span> te gaan. Selecteer één of meerdere bestellingen waarvoor je
+                    het verzendlabel wilt downloaden en afdrukken. Als je de orders hebt geselecteerd, druk je op 
+                    de knop <span class="nice">Voormelden en labels printen</span>.
+                </p>
+                <img class='center' alt="" src="media/PostNL-orderoverzicht.png">
+
+                <h2 id="4_2">4.2. Detailpagina van de order</h2>
+                <p>
+                    Je kunt het verzendlabel ook downloaden op de detailpagina van een order. 
+                    Open de order vanuit het orderoverzicht en klik op de detailpagina op de knop
+                    <span class="nice">Voormelden en labels printen</span>.
+                </p>
+
+                <img class='center' alt="" src="media/PostNL-order-detail.png">
+
+                <h1 id="5">5. Verzendproduct aanpassen</h1>
+                <p>Je kunt het verzendproduct aanpassen. Als je de meeste producten bijvoorbeeld 
+                    als standaard pakket verstuurt, kun je kleinere producten nog steeds als brievenbuspakje versturen.
+                </p>
+                <p>
+                    Wil je het product aanpassen? Selecteer dan de bestellingen in het orderoverzicht waarvoor je het 
+                    verzendproduct wilt wijzigen. Als je de orders hebt geselecteerd, klik je op de knop <span class="nice">Verzendmethode wijzigen</span> 
+                    en selecteer je het gewenste verzendproduct. Je kunt het verzendproduct ook aanpassen op de detailpagina van de order.
+                </p>
+
+                <img class='center' alt="" src="media/PostNL-verzendmethoden-wijzigen.png">
+
+                <h1 id="6">6. Verzendkosten</h1>
+                <p>
+                    De verzendkosten voor de verzendmethoden van PostNL worden in de Shopware-instellingen vastgelegd.
+                    Ga naar de <span class="nice">Shopware-instellingen → Verzending</span> en open één van de
+                    PostNL-verzendmethoden waarvoor je de verzendkosten wil bepalen.
+                </p>
+
+                <p>
+                    Voor de verzendmethode ‘PostNL Standard Shipping’ zijn vier verschillende tariefzones standaard
+                    aangemaakt. Namelijk:
+                </p>
+                <ul>
+                    <li>PostNL zone only Netherlands</li>
+                    <li>PostNL zone only Belgium</li>
+                    <li>PostNL zone only Europe</li>
+                    <li>PostNL zone only rest of world</li>
+                </ul>
+                <p>
+                    Voor de verzendmethode ‘Pick-up at PostNL point’ zijn twee verschillende tariefzones
+                    standaard aangemaakt, omdat PostNL alleen ophaalpunten aanbiedt in Nederland en
+                    België:
+                </p>
+                <ul>
+                    <li>PostNL zone only Netherlands</li>
+                    <li>PostNL zone only Belgium</li>
+                </ul>
+                <p>Om verzendkosten voor deze zones te bepalen, voer je het bedrag onder <span class="nice">Euro</span> in.</p>
+
+                <img class='center' alt="" src="media/PostNL-verzendkosten.png">
+                <p>
+                    <i>Let op, dit is zijn Shopware-instellingen. Voor het gemak hebben we verzendzones
+                    aangemaakt. Heb je vragen over het opstellen van regels met betrekking tot
+                    verzendkosten, neem dan contact op met de support van Shopware.</i>
+                </p>
+
+                <h1 id="7">7. Track & trace-mails</h1>
+                <p>Als je de PostNL-extensie downloadt, wordt er automatisch een email-template
+                aangemaakt om track & trace-mails te versturen. Dit template kun je gebruiken
+                om jouw klanten op te hoogte te stellen van de status van hun zending.
+                </p>
+                <img class='center-large-image' alt="" src="media/PostNL-track-trace-mails.png">
+                <p>
+                    Om ervoor te zorgen dat de email automatisch verstuurd wordt als de bestelling de status
+                    <span class="nice">Shipped</span> krijgt, maak je een flow aan. Ga naar de
+                    <span class="nice">Shopware Instellingen → Flow-bouwer</span>. Creëer een nieuwe flow. De <b>trigger</b> van de flow wordt het wijzigen van
+                    de status van de bestelling naar Shipped. De <b>actie</b> die daarbij hoort, is het versturen
+                    van een email naar de klant met het PostNL-template.
+                </p>
+                <img class='center' alt="" src="media/PostNL-track-trace-mails-flow.png">
+                <p>
+                    Gebruik je een oudere versie van Shopware en heb je nog geen flow-bouwer?
+                    Gebruik dan de Business Events van Shopware.
+                </p>
+                <img class='center' alt="" src="media/PostNL-track-trace-mails-business-events.png">
+            </div>
+        </section>
+        <footer class="site-footer">
+            <section class="page-footer col-xs-8 col-xs-offset-4 col-lg-9 col-lg-offset-3">
+                <span class="site-footer-owner">
+                    <img height="80" class="postnl_footer_logo" alt="PostNL logo" src="media/PostNL-logo.png"/>
+                </span>
+            </section>
+        </footer>
+    </div>
+</div>
+</body>
+</html>
