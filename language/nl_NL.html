@@ -413,9 +413,74 @@
                 </p>
 
                                 
-        <h2 id="6_3">6.3. XX</h2>
-        <h2 id="6_4">6.4. XX</h2>
-        <h2 id="6_5">6.5. XX</h2>
+        <h2 id="6_3">6.3. Return (4__)</h2>
+                <p>
+                    <b>410 - Kan geen retour zending maken voor dit order:</b>
+                    Het land waar de retourzending vandaan komt is niet geldig voor retourzendingen.
+                </p>
+                <p>
+                    <b>420 - Kan geen retour zending maken voor dit order:</b> 
+                    Het land waar de retourzending naartoe gaat is niet geldig voor retourzendingen.
+                </p>
+                <p>
+                    <b>430 - Retourlabel aanvragen is niet mogelijk wanneer er voor deze bestelling geen heenzending is aangemaakt:</b> 
+                    Bij een bestelling zonder een aangeduide verzendmethode zal er geen retourlabel verstuurd kunnen worden. Hiervoor zal er eerst een verzendmethode moeten aangeduid worden.
+                </p>
+                <p>
+                    <b>440 - Er is geen e-mailadres bekend voor deze order:</b> 
+                    Er is geen e-mailadres gevonden voor de order in Shopify om de retour labels naartoe te sturen.
+                </p>
+                <p>
+                    <b>450 - Het antwoordnummer (voor NL) of de straat (voor BE) is verplicht voor retourzendingen aan te maken:</b> 
+                    In de instellingen ontbreekt het antwoordnummer of de straatnaam van het retouradres.
+                </p>
+                
+        <h2 id="6_4">6.4. Validation of product codes (5_ _)</h2>
+                <p>
+                    <b>510 - Geen exportinstelling gevonden voor de shipping rate. Vul aan bij de instellingen:</b> 
+                    Er is geen <span class="nice">standaard exportinstelling</span> ingevuld voor deze shipping rate. 
+                    Er zal eerst een standaard exportinstelling voor deze shipping rate gekozen moeten worden voordat de verzendlabels gedownload kunnen worden. 
+                    Of open de bestelling in de PostNL-app en pas bij <span class="nice">Verzendmethode of aantal pakketten wijzigen</span> de verzendmethode van de bestelling aan.
+                </p>
+                <p>
+                    <b>520 - De shippingrate is niet ingesteld om met PostNL te verzenden:</b>
+                    De webwinkelier heeft ervoor gekozen om voor deze shipping rate geen verzendmethode van PostNL te gebruiken.
+                </p>
+                
+        <h2 id="6_5">6.5. Request (6_ _)</h2>
+                <p>
+                    <b>600 - Algemene errors die niet specifiek zijn opgevangen:</b>
+                    <ul>
+                        <li>Er is een probleem opgetreden bij het opslaan.</li>
+                        <li>Er is een probleem opgetreden bij het genereren van de label(s).</li>
+                        <li>Er is een probleem opgetreden bij het printen van de label(s).</li>
+                        <li>Er is een probleem opgetreden bij het aanvragen van een retourlabel.</li>
+                        <li>Er is een probleem opgetreden bij het aanmaken van een concept.</li>
+                     </ul>
+                </p
+                <p>
+                    <b>610 - PostNL geeft een algemene error terug:</b>
+                    In deze error zal het error bericht dat we terugkregen van PostNL zichtbaar zijn
+                </p>
+                <p>
+                    <b>620 - PostNL geeft een error bij aanmaken van het label:</b>
+                    In deze error zal het error bericht dat we terugkregen van PostNL zichtbaar zijn.
+                </p
+                <span class="nice"><i><p>
+                    Bijvoorbeeld:
+                </p>
+                <p>
+                    <b>620: Countries in receiver and sender address not allowed together for this product.</b>
+                </p>
+                <p>
+                    Bij het aanmaken van een extra pakket moet er een verzendoptie gekozen worden. 
+                    Als de webwinkelier in België gevestigd is en er wordt een verzendoptie van NL-NL aangeduid zal dit niet gaan. 
+                    Hetzelfde geldt voor een webwinkelier gevestigd in Nederland die voor een BE-BE verzendmethode kiest. 
+                    Zorg er altijd voor dat het eerste deel van de verzendmethode (BE-BE, NL-NL, BE-NL, NL-BE) het land is waar de webwinkel 
+                    is gevestigd en het tweede deel het land waar de bestelling naartoe gaat.
+                </p></span></i>
+
+                
         <h2 id="6_6">6.6. XX</h2>
         <h2 id="6_7">6.7. XX</h2>
         <h2 id="6_8">6.8. XX</h2>
