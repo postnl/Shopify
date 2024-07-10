@@ -226,50 +226,84 @@
                 <b>Bekijk hiervoor sectie 4.3.1.</b>
                 </p>
                     
-                <h2 id="3_4">Alternatieve verzendoptie</h2>
+                <h2 id="3_4">3.4. Alternatieve verzendoptie</h2>
                 <p>
-                    Selecteer bij de <span class="nice">Standaard verzendproducten</span> de verzendmethoden van
-                    PostNL in die je
-                    standaard wilt gebruiken voor de zendingen.
+                    Met deze instelling kunnen bestellingen vanaf een bepaald bedrag een andere verzendmethode krijgen dan de 
+                    verzendmethode die is ingesteld bij de standaard exportinstellingen. 
                 </p>
                 <p>
-                    Voor zendingen binnen Nederland en naar België kun je er ook voor kiezen om een alternatieve
-                    verzendmethode te activeren. Hiermee activeer je voor zendingen boven een bepaald bedrag een 
-                    andere verzendmethode dan voor zendingen onder dit bedrag.
+                    Selecteer <span class="nice">Ja</span> als je gebruik wilt maken van de alternatieve verzendmethode. 
+                    Geef vervolgens aan vanaf welk bedrag de alternatieve verzendmethode gebruikt dient 
+                    te worden en selecteer ook de gewenste verzendoptie.
                 </p>
                 <p>
-                    Activeer de opties <span class="nice">Zendingen naar Europa inschakelen</span> en/of <span class="nice">Zendingen naar de rest
-                    van de wereld inschakelen</span> als je de verzendproducten van
-                    PostNL binnen en/of buiten Europa wilt gebruiken.
+                    <b>Let op: </b>als jouw klant een bestelling plaatst waarvan het bedrag hoger is dan het ingestelde bedrag voor 
+                    de alternatieve verzendoptie, maar hij/zij heeft gekozen om de bestelling op te halen bij een PostNL-punt, 
+                    dan wordt de alternatieve verzendmethode niet toegepast.
                 </p>
 
-                <img class='center' alt="" src="media/PostNL-standaard-verzendproducten.png">
-
-                <h2 id="3_5">Wereld</h2>
+                <h2 id="3_5">3.5. Herinneringsmail PostNL-punt</h2>
                 <p>
-                    Kies je ervoor om ook naar landen buiten Europa te versturen? Vul dan een standaard
-                    GS-tarief code in. <b>Het is verplicht om de GS-tarief code per product in te vullen</b>. Dit
-                    doe je in jouw Shopware-omgeving bij <span class="nice">Catalogus → Producten → Specificaties</span>.
-                    De GS-code vind je op de site van de Nederlandse Kamer van Koophandel.
+                    Het is in de Shopify app van PostNL-app niet mogelijk om de PostNL-punten te tonen zodra te klant kiest 
+                    voor <span class="nice">Ophalen bij een PostNL-punt</span>. Jouw klant kan het gewenste PostNL-punt selecteren op de bedankpagina 
+                    na het plaatsen van zijn/haar bestelling. Als jouw klant vergeet om een PostNL-punt te selecteren wordt er 
+                    na 30 minuten automatisch een herinneringsmail naar de klant gestuurd.
+                </p>
+                
+                <h2 id="3_6">3.6. Wereldzendingen</h2>
+                <p>
+                    Om voor een wereldzending een douaneformulier op te stellen zijn het gewicht per pakket, 
+                    het land van oorsprong en de HS-code benodigd. 
                 </p>
                 <p>
-                    Ook de afmetingen, het gewicht en het land van herkomst zijn verplicht voor zendingen
-                    buiten Europa. Deze gegevens zijn nodig voor de douaneformulieren. Deze
-                    gegevens vul je ook in bij de <span class="nice">Producten-instellingen</span> van Shopware.
+                    Deze kenmerken kunnen in de Shopify instellingen worden toegevoegd aan de producten. Ga naar <span class="nice">Producten</span> → Open een 
+                    product → Ga naar beneden en voeg in het blok <span class="nice">Verzending</span> het <b>gewicht, land van herkomst en de HS-code</b> in. 
                 </p>
-                <p>Sla tussentijds, of na het afronden van de configuratie, de wijzigingen op.</p>
-                <img class='center-large-image' alt="" src="media/PostNL-wereld-instellingen.png">
-                <img class='center-large-image' alt="" src="media/PostNL-wereld-instellingen-aangepaste-velden.png">
-
-                <h2 id="3_6">Adres check</h2>
                 <p>
-                    Als je de adrescheck activeert,  worden Nederlandse adressen in de check-out van de 
-                    webshop gevalideerd op basis van de combinatie postcode en huisnummer. Deze dienst 
-                    bieden we gratis aan.
+                    <b>Let op:</b> het belangrijk dat je per product een HS-code hebt ingesteld. Als je dit niet doet, 
+                    is de kans aanwezig dat het pakket niet door de douane komt.
                 </p>
-                <img class='center-large-image ' alt="" src="media/PostNL-adres-check.png">
 
-                <h2 id="3_7">Retourlabel</h2>
+                <h1 id="4">4. Gebruik van de plug-in</h1>
+                <h2 id="4_1">4.1. Aanmaken van een verzendlabel</h2>
+                <p>De verzendlabels kunnen aangemaakt worden in het <b>Bestellingen overzicht van Shopify</b> of in 
+                    het <b>Bestellingen overzicht van de PostNL-app.</b></p>
+                
+                    <h3 id="4_1_1">4.1.1. Bestellingen overzicht Shopify</h3>
+                        <p> 
+                        Na het openen van een bestelling in het bestellingen overzicht van Shopify vind je bovenaan de pagina de knop <span class="nice">meer acties</span>. 
+                        In dit menu kan je voor de PostNL optie <span class="nice"><b>Label printen & voormelden</b></span> kiezen. De zending wordt dan voorgemeld en het 
+                        verzendlabel wordt gedownload. 
+                        </p>
+                
+                        <p>
+                            Het is mogelijk om voor meerdere bestellingen tegelijk het label te printen en deze bestellingen voor te melden bij PostNL. 
+                            Ga terug naar het bestellingen overzicht en selecteer de bestellingen door vinkjes te zetten voor de bestellingen. 
+                            Druk vervolgens  rechts in het overzicht op de <span class="nice">···</span> (drie puntjes) en selecteer de optie <span class="nice"><b>Label printen & voormelden</b></span>. 
+                            Er zullen nu meerdere verzendlabels tegelijk gedownload worden. En de bestellingen worden direct voorgemeld bij PostNL. 
+                        </p>
+                
+                    <h3 id="4_1_2">4.1.2. Bestellingen overzicht PostNL</h3>
+                        <p>
+                            Open de PostNL-app en ga naar het bestellingen overzicht. 
+                            Na het openen van een bestelling in het bestellingen overzicht van PostNL vind je bovenaan de pagina 
+                            de knop <span class="nice"><b>Label printen & voormelden</b></span>. Klik op deze knop om het verzendlabel te downloaden 
+                            en de zending voor de melden bij PostNL. 
+                        </p>
+                        <p> 
+                            Ook is het mogelijk om voor meerdere bestellingen tegelijk het label te printen en deze bestellingen 
+                            voor te melden bij PostNL. Ga terug naar het bestellingen overzicht van de PostNL-app en selecteer de bestellingen. 
+                            Druk vervolgens op de knop <span class="nice"><b>Label printen & voormelden</b></span> om meerdere verzendlabels tegelijk 
+                            te downloaden en deze zendingen voor te melden bij PostNL. Door op de knop <span class="nice"><b>Label printen</b></span> te klikken wordt 
+                            het verzendlabel gedownload, maar wordt de zending niet voorgemeld bij PostNL
+                        </p>
+                                                                   
+                <h2 id="4_2">4.2. Verzendlabels voor wereldwijde bestellingen</h2>
+                
+                <h2 id="4_3">4.3. Aanpassen van een enkele zending</h2>
+                    <h3 id="4_3_1">4.3.1. Brievenbuspakje</h3>
+                    <h3 id="4_3_2">4.3.2. Retourlabel mailen</h3>
+                    
                 <p>
                     Het is mogelijk om tegelijk met het aanmaken van de verzendlabels van de heen-zending
                     een label voor de retour-zending te maken. Het retourlabel kan in het pakket van de
