@@ -72,3 +72,4 @@ function waitForHashTargetAndScroll() {
 
   tryScroll();
 }
+});
