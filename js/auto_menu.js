@@ -48,3 +48,27 @@ $( document ).ready(function() {
     });*/
 
 });
+
+function waitForHashTargetAndScroll() {
+  var id = window.location.hash.substring(1);
+  if (!id) return;
+
+  var maxAttempts = 50;
+  var attempts = 0;
+
+  function isVisible(el) {
+    return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+  }
+
+  function tryScroll() {
+    var el = document.getElementById(id);
+    if (el && isVisible(el)) {
+      el.scrollIntoView({ behavior: "smooth" });
+    } else if (attempts < maxAttempts) {
+      attempts++;
+      setTimeout(tryScroll, 200);
+    }
+  }
+
+  tryScroll();
+}
