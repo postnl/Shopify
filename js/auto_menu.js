@@ -72,4 +72,7 @@ function waitForHashTargetAndScroll() {
 
   tryScroll();
 }
-});
+
+//  Event listeners meteen daarna plaatsen:
+$(window).on('load', waitForHashTargetAndScroll);
+$(window).on('hashchange', waitForHashTargetAndScroll);
