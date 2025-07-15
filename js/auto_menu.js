@@ -1,37 +1,33 @@
-$( document ).ready(function() {
-
+$(document).ready(function () {
     var indexHtml = '';
-    indexHtml = indexHtml + '<ul class="nav">';
-    $( "h1" ).each(function() {
-        if(typeof $( this ).attr('id') != 'undefined'){
+    indexHtml += '<ul class="nav">';
+    $("h1").each(function () {
+        if (typeof $(this).attr('id') != 'undefined') {
 
-            indexHtml = indexHtml + '<li><a href="#' + $( this ).attr("id") + '"><b>' + $( this ).html() + '</b></a>';
+            indexHtml += '<li><a href="#' + $(this).attr("id") + '"><b>' + $(this).html() + '</b></a>';
 
-            indexHtml = indexHtml + '<ul class="nav h2item">';
-            $("h2[id^='" + $( this ).attr("id") + "_']").each(function() {
-                if(typeof $( this ).attr('id') != 'undefined'){
-                    indexHtml = indexHtml + '<li><a href="#' + $( this ).attr('id') + '">' + $( this ).html() + '</a>';
+            indexHtml += '<ul class="nav h2item">';
+            $("h2[id^='" + $(this).attr("id") + "_']").each(function () {
+                if (typeof $(this).attr('id') != 'undefined') {
+                    indexHtml += '<li><a href="#' + $(this).attr('id') + '">' + $(this).html() + '</a>';
 
-                    indexHtml = indexHtml + '<ul class="nav h3item">';
-                    $("h3[id^='" + $( this ).attr("id") + "_']").each(function() {
-                        if(typeof $( this ).attr('id') != 'undefined'){
-                            indexHtml = indexHtml + '<li><a href="#' + $( this ).attr('id') + '">' + $( this ).html() + '</a></li>';
+                    indexHtml += '<ul class="nav h3item">';
+                    $("h3[id^='" + $(this).attr("id") + "_']").each(function () {
+                        if (typeof $(this).attr('id') != 'undefined') {
+                            indexHtml += '<li><a href="#' + $(this).attr('id') + '">' + $(this).html() + '</a></li>';
                         }
                     });
-                    indexHtml = indexHtml + '</li></ul>';
-
+                    indexHtml += '</li></ul>';
                 }
             });
-            indexHtml = indexHtml + '</li></ul>';
-
+            indexHtml += '</li></ul>';
         }
     });
-    indexHtml = indexHtml + '</ul>';
+    indexHtml += '</ul>';
     $('.menu-items').html(indexHtml);
 
-
     $('body')
-        .scrollspy({target: '.menu-items'})
+        .scrollspy({ target: '.menu-items' })
         .on('activate.bs.scrollspy', function () {
             $('.h2item').hide();
             $('.h3item').hide();
@@ -42,37 +38,33 @@ $( document ).ready(function() {
             $('.active > .h2item').show(300);
         });
 
-    /*$('.menu li').click(function () {
-        //$('.hideH2').hide();
-        $(this).parent().find('ul').show();
-    });*/
-
+    // ✅ Scroll pas als het menu is opgebouwd
+    waitForHashTargetAndScroll();
 });
 
 function waitForHashTargetAndScroll() {
-  var id = window.location.hash.substring(1);
-  if (!id) return;
+    var id = window.location.hash.substring(1);
+    if (!id) return;
 
-  var maxAttempts = 50;
-  var attempts = 0;
+    var maxAttempts = 50;
+    var attempts = 0;
 
-  function isVisible(el) {
-    return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
-  }
-
-  function tryScroll() {
-    var el = document.getElementById(id);
-    if (el && isVisible(el)) {
-      el.scrollIntoView({ behavior: "smooth" });
-    } else if (attempts < maxAttempts) {
-      attempts++;
-      setTimeout(tryScroll, 200);
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
     }
-  }
 
-  tryScroll();
+    function tryScroll() {
+        var el = document.getElementById(id);
+        if (el && isVisible(el)) {
+            el.scrollIntoView({ behavior: "smooth" });
+        } else if (attempts < maxAttempts) {
+            attempts++;
+            setTimeout(tryScroll, 200);
+        }
+    }
+
+    tryScroll();
 }
 
-//  Event listeners meteen daarna plaatsen:
-$(window).on('load', waitForHashTargetAndScroll);
+// ✅ Scroll ook bij hash-verandering binnen pagina
 $(window).on('hashchange', waitForHashTargetAndScroll);
