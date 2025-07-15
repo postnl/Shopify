@@ -51,12 +51,21 @@ $( document ).ready(function() {
 $(window).on('load', function () {
   if (window.location.hash) {
     var id = window.location.hash.substring(1);
-    var el = document.getElementById(id);
-    if (el) {
-      // Scroll iets later zodat Bootstrap/jQuery layout klaar is
-      setTimeout(function () {
+
+    // Wacht totdat het element met dat id beschikbaar is
+    var maxAttempts = 20;
+    var attempts = 0;
+
+    var scrollToHash = function () {
+      var el = document.getElementById(id);
+      if (el) {
         el.scrollIntoView({ behavior: "smooth" });
-      }, 100);
-    }
+      } else if (attempts < maxAttempts) {
+        attempts++;
+        setTimeout(scrollToHash, 200); // probeer opnieuw na 200ms
+      }
+    };
+
+    scrollToHash();
   }
 });
