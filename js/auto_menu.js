@@ -48,3 +48,31 @@ $( document ).ready(function() {
     });*/
 
 });
+
+function scrollToHashTarget() {
+  var id = window.location.hash.substring(1);
+  if (!id) return;
+
+  var maxAttempts = 30;
+  var attempts = 0;
+
+  function tryScroll() {
+    var el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    } else if (attempts < maxAttempts) {
+      attempts++;
+      setTimeout(tryScroll, 200); // blijf proberen
+    }
+  }
+
+  tryScroll();
+}
+
+// 1. Scroll bij eerste paginalaad
+$(window).on('load', function () {
+  setTimeout(scrollToHashTarget, 500); // wacht nog even extra
+});
+
+// 2. Scroll bij hash-verandering (navigatie)
+$(window).on('hashchange', scrollToHashTarget);
