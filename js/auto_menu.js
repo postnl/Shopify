@@ -46,5 +46,16 @@ $( document ).ready(function() {
         //$('.hideH2').hide();
         $(this).parent().find('ul').show();
     });*/
-
+});
+$(window).on('load', function () {
+  if (window.location.hash) {
+    var id = window.location.hash.substring(1);
+    var el = document.getElementById(id);
+    if (el) {
+      // Scroll iets later zodat Bootstrap/jQuery layout klaar is
+      setTimeout(function () {
+        el.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }
 });
