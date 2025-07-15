@@ -59,7 +59,7 @@ function waitForHashTargetAndScroll() {
             el.scrollIntoView({ behavior: "smooth" });
         } else if (attempts < maxAttempts) {
             attempts++;
-            setTimeout(tryScroll, 200);
+            setTimeout(tryScroll, 500);
         }
     }
 
