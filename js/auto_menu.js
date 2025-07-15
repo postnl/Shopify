@@ -1,31 +1,35 @@
 $(document).ready(function () {
     var indexHtml = '';
     indexHtml += '<ul class="nav">';
+
     $("h1").each(function () {
-        if (typeof $(this).attr('id') != 'undefined') {
-
+        if (typeof $(this).attr('id') !== 'undefined') {
             indexHtml += '<li><a href="#' + $(this).attr("id") + '"><b>' + $(this).html() + '</b></a>';
-
             indexHtml += '<ul class="nav h2item">';
-            $("h2[id^='" + $(this).attr("id") + "_']").each(function () {
-                if (typeof $(this).attr('id') != 'undefined') {
-                    indexHtml += '<li><a href="#' + $(this).attr('id') + '">' + $(this).html() + '</a>';
 
+            $("h2[id^='" + $(this).attr("id") + "_']").each(function () {
+                if (typeof $(this).attr('id') !== 'undefined') {
+                    indexHtml += '<li><a href="#' + $(this).attr('id') + '">' + $(this).html() + '</a>';
                     indexHtml += '<ul class="nav h3item">';
+
                     $("h3[id^='" + $(this).attr("id") + "_']").each(function () {
-                        if (typeof $(this).attr('id') != 'undefined') {
+                        if (typeof $(this).attr('id') !== 'undefined') {
                             indexHtml += '<li><a href="#' + $(this).attr('id') + '">' + $(this).html() + '</a></li>';
                         }
                     });
-                    indexHtml += '</li></ul>';
+
+                    indexHtml += '</li></ul>'; // sluit h3
                 }
             });
-            indexHtml += '</li></ul>';
+
+            indexHtml += '</li></ul>'; // sluit h2
         }
     });
+
     indexHtml += '</ul>';
     $('.menu-items').html(indexHtml);
 
+    // Scrollspy activeren
     $('body')
         .scrollspy({ target: '.menu-items' })
         .on('activate.bs.scrollspy', function () {
@@ -38,8 +42,8 @@ $(document).ready(function () {
             $('.active > .h2item').show(300);
         });
 
-    // ✅ Scroll pas als het menu is opgebouwd
-    waitForHashTargetAndScroll();
+    // ✅ Scroll pas nadat menu klaar is én layout stabiel is
+    setTimeout(waitForHashTargetAndScroll, 200);
 });
 
 function waitForHashTargetAndScroll() {
