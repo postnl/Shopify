@@ -1,5 +1,5 @@
-﻿<!DOCTYPE html>
-<html lang="en-us">
+<!DOCTYPE html>
+<html lang="en-US">
     <head>
         <meta charset="UTF-8" />
         <title>PostNL Shopify Manual</title>
@@ -14,6 +14,53 @@
         <script src="js/jquery-3.0.0.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/languagepicker.js"></script>
+        <!-- START: small script to make page auto-translatable -->
+        <script>
+        (function() {
+            // Set a sensible default lang before content injection so browsers can detect language
+            document.addEventListener('DOMContentLoaded', function () {
+                // If the user's browser language is Dutch, set page to Dutch by default.
+                var navLang = (navigator.language || navigator.userLanguage || 'en-US').toLowerCase();
+                if (navLang.indexOf('nl') === 0) {
+                    document.documentElement.lang = 'nl-NL';
+                } else {
+                    document.documentElement.lang = 'en-US';
+                }
+
+                // Hook the language picker to set the html lang attribute immediately when user switches.
+                // This assumes your languagepicker exposes clickable <li id="NL"> / <li id="EN"> elements as in the current markup.
+                $('#languagepicker').on('click', 'li', function () {
+                    var id = $(this).attr('id');
+                    if (!id) return;
+                    if (id.toUpperCase() === 'NL') {
+                        document.documentElement.lang = 'nl-NL';
+                        // loadLanguage is a minimal loader; if you have an existing loader, call that instead.
+                        loadLanguage('language/nl_NL.html');
+                    } else if (id.toUpperCase() === 'EN') {
+                        document.documentElement.lang = 'en-US';
+                        loadLanguage('language/en_US.html');
+                    }
+                });
+
+                // Minimal, safe language loader: fetch HTML fragment and insert as HTML so browser sees real text nodes.
+                function loadLanguage(path) {
+                    $.get(path, function (data) {
+                        // Insert HTML fragments (ensure these files are plain HTML/text, not images)
+                        $('.all-content').html(data);
+                        // After injecting localized HTML, set lang again (some browsers may re-evaluate).
+                        // document.documentElement.lang is already set above.
+                    }).fail(function () {
+                        // fallback: if files aren't available, keep whatever content you have
+                        console.warn('Could not load language file:', path);
+                    });
+                }
+
+                // If you already inject content server-side or with other JS, ensure that you call:
+                // document.documentElement.lang = '<appropriate locale>'; immediately before/after injection.
+            });
+        })();
+        </script>
+        <!-- END -->
     </head>
     <body>
         <ul id="languagepicker" class="languagepicker btn">
