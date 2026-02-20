@@ -1,0 +1,740 @@
+<script src="js/auto_menu.js" xmlns="http://www.w3.org/1999/html"></script>
+<div class="container-fluid">
+    <div class="row">
+        <div class="menu col-xs-4 col-lg-3">
+            <nav class="navbar nav nav-pills nav-stacked">
+                <div class="menu-items">
+                </div>
+            </nav>
+        </div>
+        <section class="page-header col-xs-8 col-xs-offset-4 col-lg-9 col-lg-offset-3">
+            <section class="col-xs-5 col-xs-offset-5 col-lg-9 col-lg-offset-1">
+                <img class="image-header-postnl-logo" alt="PostNL logo" src="media/PostNL-logo.png">
+            </section>
+            <br/>
+        </section>
+        <section class="main-content col-xs-8 col-xs-offset-4 col-lg-7 col-lg-offset-4">
+            <h1 class="project-name">Manual PostNL app for <b>Shopify</b></h1>
+            <div style="margin-top:10px">
+
+<h1 id="1">1. Introduction</h1>
+<p>
+    With the PostNL Shopify plug‑in you can easily ship your orders with PostNL.
+    You can print shipping labels, register your shipment with PostNL and track
+    the status of your parcels.
+</p>
+
+<p>
+    With this PostNL plug‑in, Dutch and Belgian merchants can create different
+    types of shipments:
+</p>
+
+<ul>
+    <li><b>Parcels Netherlands:</b> home delivery or pick‑up at a PostNL point</li>
+    <li><b>Parcels Belgium:</b> home delivery or pick‑up at a PostNL point</li>
+    <li><b>Parcels within the EU</b></li>
+    <li><b>Parcels outside the EU</b></li>
+    <li><b>Letterbox parcels:</b> to the Netherlands, Belgium, EU and non‑EU destinations</li>
+</ul>
+<h1 id="2">2. Installing the PostNL app</h1>
+
+<h2 id="2_1">2.1. New installation</h2>
+
+<p>To install the PostNL plug‑in, follow these steps:</p>
+<ol>
+    <li>In your Shopify environment, go to Apps</li>
+    <li>Click the button <span class="nice">Go to the Shopify App Store</span> in the top right corner</li>
+    <li>Select the desired shop if you manage multiple Shopify stores</li>
+    <li>Type <span class="nice">PostNL</span> in the search bar and press enter</li>
+    <li>Click the <span class="nice">PostNL</span> app and then click <span class="nice">Install</span></li>
+</ol>
+
+<h2 id="2_2">2.2. Updating an existing installation</h2>
+<p>
+    The app will automatically update as soon as a new version becomes available.
+    No manual maintenance is needed.
+</p>
+
+<h2 id="2_3">2.3. Testing</h2>
+<p>
+    We recommend going through the checkout process by placing a test order after installing and configuring the app to ensure the checkout experience meets your expectations.
+</p>
+
+<p>
+    After configuring the app, you can test registering shipments with PostNL and printing shipping labels.
+    No fees will be incurred as long as the labels are not handed over to PostNL.
+</p>
+
+<h1 id="3">3 Configuration</h1>
+<p>
+    Go to <span class="nice">Apps > Installed Apps > PostNL</span> to open the PostNL app.
+    Click <span class="nice" translate="no">Settings</span> in the top right corner to configure the app.
+</p>
+
+<h2 id="3_1">3.1. Account</h2>
+
+<h3 id="3_1_1">3.1.1. API key</h3>
+<p>
+    The first important part of the integration is the API key. In your
+    <a href="https://mijn.postnl.nl/c/BP2_Mod_Login.app?inresponseto=&RelayState=&startURL=%2F">PostNL Business</a>
+    environment you can find your customer data and API keys under
+    <span class="nice">Account → Company details → Manage API</span>.
+</p>
+
+<p>
+    <b>Note:</b> There are separate API keys for Sandbox and Production.
+    Make sure to enter the <u>production</u> API key here and not the sandbox key.
+</p>
+
+<img class='center-large-image' alt="" src="media/A_ApikeyENG.JPG">
+
+<h3 id="3_1_2">3.1.2. Customer information</h3>
+<p>
+    In your
+    <a href="https://mijn.postnl.nl/c/BP2_Mod_Login.app?inresponseto=&RelayState=&startURL=%2F">PostNL Business</a>
+    environment you can find your customer information.
+    Enter the customer number, customer code, location code, non-EU customer code type (the two letters),
+    and the four-digit customer code for non-EU shipments in the <span class="nice">Customer information</span> section.
+</p>
+
+<p>
+    If you cannot find this customer information in your PostNL Business account,
+    please contact your PostNL account representative.
+</p>
+
+<img class='center-large-image' alt="" src="media/A_klantgegevensENG.JPG">
+
+<h3 id="3_1_3">3.1.3. Sender address</h3>
+<p>
+    Enter the address of your company under <span class="nice">Sender address</span>.
+</p>
+
+<img class='center-large-image' alt="" src="media/A_AfzendadresENG.JPG">
+
+<h3 id="3_1_4">3.1.4. Return address</h3>
+<p>
+    When shipping from the Netherlands, a return label can be created using a reply number.
+    When shipping from Belgium, the return shipment is created based on the sender address.
+</p>
+
+<p>
+    Depending on the country selected in the sender address, the return fields will be displayed.
+    Enter your company’s return details here.
+    Your <span class="nice">return customer code</span> is available in your
+    <a href="https://mijn.postnl.nl/c/BP2_Mod_Login.app?inresponseto=&RelayState=&startURL=%2F">PostNL Business</a>
+    environment or via your PostNL contact person.
+</p>
+
+<p>
+    Press <span class="nice">Save</span> during the process to store your configuration.
+</p>
+
+<img class='center-large-image' alt="" src="media/A_retouradresENG.JPG">
+
+<h2 id="3_2">3.2. General settings</h2>
+
+<img class='center-large-image' alt="" src="media/A_Algemene instellingenENG.JPG">
+
+<h3 id="3_2_1">3.2.1. Default page selection</h3>
+<p>
+    Here you specify whether you want to print the label using a 
+    <b>standard printer (A4)</b> or a <b>label printer (A6)</b>.
+    If you choose A4 here, you can specify the starting position on the A4 sheet when printing labels.
+</p>
+
+<h3 id="3_2_2">3.2.2. Description on label</h3>
+<p>
+    With this option, you can add a description to the label in addition to the order number or order name.
+    This description will be placed at the top, centered on the shipping label.
+</p>
+
+<h3 id="3_2_3">3.2.3. Fulfilment</h3>
+<p>
+    You have the option to manually set the status of your orders to 
+    <span class="nice">Fulfilled</span>.
+    This means that a manual action is required to update the order status.
+    Prefer this to happen <span class="nice">automatically</span>?
+    Then select the option Automatic. Once the parcel receives its first scan at PostNL,
+    the status changes to <span class="nice">Fulfilled</span>.
+</p>
+
+<h3 id="3_2_4">3.2.4. Fulfilment notification</h3>
+<p>
+    When the order is fulfilled, the recipient will receive an email 
+    with the shipment status.
+</p>
+
+<h2 id="3_3">3.3. Default export settings</h2>
+<p>
+    With the default export settings you link the 
+    <span class="nice">PostNL shipping method</span> 
+    to the shipping zones you have created in Shopify.
+    It is very important that the shipping zones match PostNL’s different shipping methods
+    and that <b>no shipping rates exist with the same name</b>.
+    This does not apply to 'PostNL afhaalpunten' for the Netherlands and Belgium,
+    as the PostNL app creates these rates automatically.
+    If duplicate names do exist, 
+    they must be completely deleted first and then recreated with a unique name.
+    <br><br>
+    For more information about international shipping products, visit
+    <a href="https://www.postnl.nl/zakelijk/pakket-versturen/pakket-buitenland/">
+        the information page
+    </a>
+    or contact your PostNL account manager.
+</p>
+
+<img class='center-large-image' alt="" src="media/Overzicht ExportinstellingenENG.png">
+
+<h3 id="3_3_1">3.3.1. Shipping method settings</h3>
+<p>
+    When you click <span class="nice">Manage</span> for a shipping zone,
+    a new window opens. Here you can choose whether you want to use
+    the <span class="nice">PostNL shipping methods</span>.
+    If you enable PostNL shipping methods, select which options you want to offer for each type of shipment.
+</p>
+
+<img class='center-large-image' alt="" src="media/Overzicht verzendmethodes PostNLENG.jpg">
+
+<ul>
+    <li>
+        <b>Standard delivery Netherlands (from the Netherlands):</b>
+Parcels are delivered to a home or business address in the Netherlands. The merchant is also located in the Netherlands.
+    </li>
+
+    <li>
+        <b>Pick-up at a PostNL point Netherlands (from the Netherlands):</b>
+Parcels are delivered to a PostNL pick-up point in the Netherlands. The merchant is also located in the Netherlands.
+    </li>
+
+    <li>
+        <b>Standard delivery Belgium (from the Netherlands):</b>
+Parcels are delivered to a home or business address in Belgium. The merchant is located in the Netherlands.
+    </li>
+
+    <li>
+        <b>Pick-up at a PostNL point Belgium (from the Netherlands):</b>
+Parcels are delivered to a PostNL pick-up point in Belgium. The merchant is located in the Netherlands.
+    </li>
+
+    <li>
+        <b>Standard delivery Belgium (from Belgium):</b>
+Parcels are delivered to a home or business address in Belgium. The merchant is also located in Belgium.
+    </li>
+
+    <li>
+        <b>Pick‑up at a PostNL point Belgium (from Belgium):</b>
+        Parcels are delivered to a PostNL pick‑up point in Belgium. The merchant is also located in Belgium.
+    </li>
+
+    <li>
+        <b>Delivery within the EU:</b> For all shipments to EU destinations.
+    </li>
+
+    <li>
+        <b>Delivery outside the EU:</b> for all shipments to non-EU destinations.
+    </li>
+
+    <li>
+        <b>(Letterbox) packets International / EU:</b>
+        For letterbox parcels and small parcels sent within or outside Europe.
+    </li>
+</ul>
+
+<p>
+    Is your webshop located in <b>the Netherlands</b>?
+    Always choose a shipping method from the categories marked with
+    <b>(from the Netherlands)</b>.
+    This does not apply to European and worldwide shipping methods.
+</p>
+
+<p>
+    Is your webshop located in <b>Belgium</b>?
+    Always choose a shipping method from the categories marked with
+    <b>(from Belgium)</b>.
+    This does not apply to European and worldwide shipping methods.
+</p>
+<h3 id="3_3_2">3.3.2 Pick‑up points</h3>
+<p>
+<b>Merchants with a Shopify Grow (formerly Shopify), Advanced or Plus plan can display PostNL pick‑up points on the Shipping page during checkout. For merchants with a Shopify Basic plan, the pick‑up points can be shown on the Thank‑you page.</b>
+</p>
+
+<h4 id="3_3_2_1"><b>Activate pick‑up points (Grow, Advanced and Plus)</b></h4>
+<p>
+When installing the PostNL app, a shipping rate is automatically created per <b>shipping zone</b> 
+(go to <span class="nice">Settings > Shipping & Delivery > General shipping rates</span>).  
+This rate, called <b>PostNL pick‑up points (rates provided by the app)</b>, allows consumers to have their parcel delivered to a PostNL pick‑up location.
+</p>
+
+<img class='center-small-image' alt="" src="media/PostNL AfhaalpunttariefENG.png">
+
+<p>
+If you install the PostNL app first and only then create your Shipping Zones, the rate will not appear automatically, and you will need to manually add the PostNL pick‑up point rate.
+<ol>
+    <li>Click <span class="nice">+ Add rate</span> under the shipping zone</li>
+    <li>Select <b>Use carrier or app to calculate rates</b></li>
+    <li>Select <b>PostNL pick‑up points (rates provided by the app)</b></li>
+    <li>Select <u>all</u> <b>Services</b>. This ensures pick‑up points are displayed in checkout when a valid delivery address is entered.</li>
+</ol>
+</p>
+
+<p>
+Then, in the PostNL app, go to <span class="nice">Settings > Default export settings</span> 
+and click <span class="nice">Manage</span> next to Netherlands – PostNL pick‑up point.  
+Here you can determine whether PostNL pick‑up points are shown during checkout and set the <b>price</b> for this shipping method.  
+In this menu, you can also specify which shipping method applies to pick‑up locations.
+</p>
+
+<img class='center-large-image' alt="" src="media/PostNL Afhaalpunttarief Zone.png">
+<img class='center-small-image' alt="" src="media/Afhaalpunten selectie verzendmethode.jpg">
+
+<p>
+The following shipping methods are available for PostNL pick‑up points:
+<ul>
+<li><b>Pick‑up at a PostNL point Netherlands (from the Netherlands):</b> for pick‑up points in the Netherlands; merchant address is in the Netherlands.</li>
+<li><b>Pick‑up at a PostNL point Netherlands (from Belgium):</b> for pick‑up points in the Netherlands; merchant address is in Belgium.</li>
+<li><b>Pick‑up at a PostNL point Belgium (from the Netherlands):</b> for pick‑up points in Belgium; merchant address is in the Netherlands.</li>
+<li><b>Pick‑up at a PostNL point Belgium (from Belgium):</b> for pick‑up points in Belgium; merchant address is in Belgium.</li>
+</ul>
+</p>
+
+<p>Save the settings and the pick‑up points will appear in your checkout.</p>
+
+<img class='center-small-image' alt="" src="media/CheckoutAfhaallocatiesENG.png">
+
+<h4 id="3_3_2_2"><b>Dynamic rates for Pick‑up Points (Grow, Advanced or Plus)</b></h4>
+<p>
+Want to set different rates for Pick‑up Points? You can! After selecting a shipping method, scroll down. First specify the minimum order amount required for customers to pick up their order at a PostNL point. Then choose whether you want to use <span class="nice">(1) a fixed rate</span> or <span class="nice">(2) conditional rates</span>.
+The shipping costs can vary based on the <b>total order amount</b> or the <b>weight of the shipment</b>. Add as many rates as you need. When dynamic rates are enabled, the fixed rate will be disabled.
+</p>
+
+<img class='center-small-image' alt="" src="media/Dynamische tarieven afhaalpunten.jpg">
+		    
+<h4 id="3_3_2_2"><b>Activating Pick‑up Points (Basic)</b></h4>
+<p>
+Using a Shopify Basic plan? Learn how to display PostNL pick‑up points on your checkout’s Thank You page. </p>
+
+<p>
+<b>If you installed the PostNL app before 1 February 2025, make sure to apply the update for the Thank You page and the Order Status page starting 2 September 2025.
+You can do this by following the steps below.</b></p>
+				
+<p>
+<ol>
+<li>Go to <span class="nice">Settings</span> in Shopify.</li>
+<li>Click <span class="nice">Checkout</span>.</li> 
+<li>The required update will appear at the top.</li>
+<img class='center-large-image' alt="" src="media/AAAAA_Checkout update.jpg">
+<li>Perform the requested action.</li>
+<li>Then, under Checkout Settings, click <b>Customize</b> in the <span class="nice">Configuration block</span>.</li>
+<li>At the top center of the page, click <b>Checkout</b>.</li>
+<img class='center-large-image' alt="" src="media/AAAAA_Checkout paginas updateENG.jpg">
+<li>Select the <b>Thank You page</b> and publish it.</li>
+<li>Repeat step (7) for the <b>Order Status page</b>. </li>    
+</ol>
+</p>
+
+<p>
+Now configure the Pick‑up Points:</p>
+				
+<ol>
+<li>Create a shipping rate for PostNL pick‑up points via <span class="nice">Settings > Shipping & Delivery > General shipping rates</span>. </li>
+<li>Next, in the PostNL app, go to <span class="nice">Settings > Default export settings</span> and click Manage next to the shipping rate you just created.</li> 
+<li>Choose the desired PostNL shipping product under <b>Pick‑up at a PostNL point Netherlands</b> (or Belgium). </li>
+<li>Save the selected shipping product.</li>  
+<li>Save the PostNL settings.</li> 
+</ol>
+</p>
+
+<p>If the customer forgets to select a pick‑up point on the Thank You page, they will receive a <b>reminder email</b> after 30 minutes.
+This allows them to select a pick‑up point afterwards. </p>
+
+<img class='center-image' alt="" src="media/PostNL afhaalpunt basic.jpg">
+<img class='center-image' alt="" src="media/PostNL afhaalpunt basic verzendproduct.jpg">
+
+
+<span class="nice"><h3 id="3_3_3"><b>Example: configuring shipping methods</b></h3>
+                    <p>
+                    <i>
+My webshop is located in the Netherlands. For the Netherlands, I have created one shipping zone with two different prices: one price for standard delivery and one price for Pick‑up Points.
+                    </p>
+<img class='center-image' alt="" src="media/PostNL Afhaalpunttarief.png">
+                    <p>  
+Next, I go to the [Settings of the PostNL app > Default export settings]. There I select, for PostNL Standard and PostNL Pick‑up Points, a shipping method that matches the Dutch shipping options.
+                    </p>
+For PostNL Standard, I choose one of the shipping methods from the category <b>Standard delivery Netherlands (from the Netherlands).</b>    
+                    </p>
+                    <p>
+For PostNL Pick‑up Points, I choose one of the shipping methods from the category <b>PostNL Pick‑up Points</b>. Note: here I also enter the <b>price</b> for Pick‑up Points (and not in Shopify’s Shipping & Delivery settings as is the case for PostNL Standard).
+</i> </p>
+</span>
+                
+<h3 id="3_3_4">3.3.3 Shipping options</h3>
+<p>
+Some shipping methods include the following additional shipping options. Below you will find an explanation of what each option includes.
+</p>
+<ul>
+<li><b>Signature on delivery: </b> choose this option if you want confirmation that the order is delivered to the correct person.</li>
+<li><b>Home address only: </b> with this option, the order will not be delivered to neighbors.</li>
+<li><b>Return if not home: </b> with this option, the order will be returned immediately if it cannot be delivered to the recipient.</li>
+<li><b>Increased liability: </b> shipping valuable goods? With our increased liability option, the contents of your parcel are insured against damage or loss. Indicate the insured amount when using this option.</li>
+<li><b>Notification</b> (in combination with pick‑up at a PostNL point): with this option, the recipient will receive a notification when the parcel arrives at the PostNL point.</li>      
+</ul>
+
+<p>
+Do all your products fit through the letterbox (38 x 26.5 x 3.2 cm) and do they weigh no more than 2 kg?  
+Then it is advisable to ship the orders as a <span class="nice">letterbox parcel</span>.  
+This option is available for shipments within the Netherlands and both within and outside the EU.
+</p>
+
+<p>
+It is also possible to send an individual order as a letterbox parcel.
+</p>
+
+<p>
+<b>See section 4.3.1 for more information.</b>
+</p>
+
+
+<h2 id="3_4">3.4. Alternative shipping option</h2>
+<p>
+With this setting, you can apply a different shipping method for orders above a certain amount  
+than the one configured under the default export settings.
+</p>
+
+<p>
+Select <span class="nice">Yes</span> if you want to use the alternative shipping method.  
+Then indicate from which order value the alternative shipping method should apply  
+and select the desired option.
+</p>
+
+<img class='center-large-image' alt="" src="media/A_AlternatieveVerzendwijzeENG.JPG">
+
+<p>
+<b>Note:</b> If your customer places an order above the amount configured for the alternative shipping method,  
+but chooses pick‑up at a PostNL point during checkout, then the alternative shipping method will NOT be applied.
+</p>
+
+
+<h2 id="3_6">3.6. Worldwide shipping</h2>
+<p>
+To create a customs form for worldwide shipments, the weight per parcel,  
+country of origin and HS code are required.
+</p>
+
+<p>
+These product attributes can be added in Shopify.  
+Go to <span class="nice">Products</span> → open a product → scroll down to the  
+<span class="nice">Shipping</span> section and enter the <b>weight, country of origin, and HS code</b>.
+</p>
+
+<p>
+<b>Note:</b> It is important that each product has an HS code configured.  
+If not, there is a risk that the parcel will not pass through customs.
+</p>
+
+<img class='center-image' alt="" src="media/A_KenmerkennonEUENG.JPG">
+<h1 id="4">4. Using the plug‑in</h1>
+
+<h2 id="4_1">4.1. Creating a shipping label</h2>
+<p>
+Shipping labels can be created in the <b>Shopify order overview</b> or in the 
+<b>PostNL app order overview</b>.
+</p>
+
+<h3 id="4_1_1">4.1.1. Shopify order overview</h3>
+<p>
+When you open an order in the Shopify orders overview, you’ll find the 
+<span class="nice">more actions</span> button at the top of the page.
+From this menu, select the PostNL option <span class="nice"><b>Print label & pre‑announce</b></span>.  
+The shipment will then be pre‑announced and the shipping label will be downloaded.
+</p>
+
+<p>
+You can also print labels and pre‑announce multiple orders at once. In the orders overview, select the orders you want to process. Then click the <span class="nice">···</span> (three dots) on the right and choose 
+<span class="nice"><b>Print label & pre‑announce</b></span>.
+ All selected shipments will be pre‑announced, and multiple labels will download at the same time.”
+</p>
+
+<h3 id="4_1_2">4.1.2. PostNL order overview</h3>
+<p>
+Open the PostNL app and go to the orders overview.  
+After opening an order, you will find the button 
+<span class="nice"><b>Print label & pre‑announce</b></span> at the top of the page.
+Click this button to download the label and pre‑announce the shipment to PostNL.
+</p>
+
+<p>
+You can also print labels and pre‑announce multiple shipments at once.
+Select the desired orders in the PostNL app orders overview and click 
+<span class="nice"><b>Print label & pre‑announce</b></span>.
+To download a label without pre‑announcing the shipment, click 
+<span class="nice"><b>Print label</b></span>.
+</p>
+
+<h3 id="4_1_3">4.1.3. Track & Trace information for the consumer</h3>
+<p>
+The PostNL app automatically adds the correct Track & Trace link to the “Shipping updates” email
+that Shopify sends once an order is <span class="nice"><b>fulfilled</b></span>.
+</p>
+
+<p>
+It is important that, after generating the shipping label, you do <b>not manually</b> enter a 
+<span class="nice"><b>Tracking number</b></span> or 
+<span class="nice"><b>Carrier</b></span> when fulfilling the order.
+Leave these fields empty and click <span class="nice"><b>Fulfill item</b></span>  
+or click <span class="nice"><b>Mark as fulfilled</b></span> when selecting orders in the Shopify orders overview.
+</p>
+
+
+<h2 id="4_2">4.2. Shipping labels for worldwide orders</h2>
+<p>
+When printing labels for orders outside the EU, note that three documents will be downloaded automatically.
+Make sure to print all three:
+<ol>
+    <li>The shipping label</li>
+    <li>The CN23 form</li>
+    <li>The CP71 form</li>
+</ol>
+</p>
+
+<p>
+<b>Note:</b> For shipments outside the EU, the weight, country of origin and HS code must be filled in for all products.  
+See section 3.6.
+</p>
+
+
+<h2 id="4_3">4.3. Adjusting an individual shipment</h2>
+<p>
+If you want to send an order using a different shipping method than the one defined in the Default export settings,  
+you can adjust this within the PostNL app.
+Open the desired order in the PostNL app.  
+In the section <span class="nice">Change shipping method or number of parcels</span>  
+you can modify the number of parcels or change the shipping method.
+</p>
+
+<p>
+Change the <b>number of parcels</b> if the content of a single order is too large or too heavy to ship as one parcel.  
+Select the number of parcels and click <span class="nice">Change & print</span>.
+</p>
+
+<p>
+Do you want to apply a <b>different shipping method</b> for this specific order?  
+Select the desired option.  
+If you choose a method with increased liability, enter the insured value.  
+Then click <span class="nice">Change & print</span>.
+</p>
+
+<p>
+<b>Note:</b> If your customer chose to have the parcel delivered to a PostNL pick‑up point,  
+do not change the shipping method to a home‑delivery method.  
+Likewise, if the customer chose home delivery, do not change the method to pick‑up at a PostNL point.
+</p>
+
+
+<h3 id="4_3_1">4.3.1. Letterbox parcel</h3>
+<p>
+Does the shipment fit through the letterbox (38 x 26.5 x 3.2 cm) and does it weigh no more than 2 kg?  
+Then it is recommended to send the order as a letterbox parcel.  
+Change the shipping option to <b>NL‑NL: Letterbox parcel</b>  
+and click <span class="nice">Change & print</span>.
+</p>
+
+<img class='center-large-image' alt="" src="A_wijzigen.JPG">
+
+<h3 id="4_3_2">4.3.2. Emailing a return label</h3>
+<p>
+Has your customer received the order but wants to return it?  
+You can easily email the return label to the customer,  
+or share a barcode so the customer can have the return label printed at a PostNL point.
+</p>
+
+<p>
+We recommend creating a return shipment via the <b>PostNL app Orders overview</b>.
+Open the order and click <span class="nice">Send return label</span> in the top‑right corner.  
+You then have two options:
+<ol>
+    <li><b>Email the return label to the customer:</b>  
+        The label is emailed directly to the customer, who must print it themselves.</li>
+    <li><b>Email a barcode to the customer (smart return):</b>  
+        The customer receives a barcode that can be scanned at a PostNL service point  
+        to have the return label printed — ideal for customers without a printer.</li>
+</ol>
+</p>
+
+<img class='center-large-image' alt="" src="A_Retouremail.jpg">
+<h1 id="5">5. Support</h1>
+<a title="5" name="Support"></a>
+<p>
+For questions and/or comments about the Shopify plug‑in, you can contact Channel Integrations,  
+formerly Digital Customer Support.  
+Create a support case directly via the PostNL 
+<a href="https://developer.postnl.nl/support/form/">Developer’s Portal</a>.
+</p>
+
+<h1 id="6">6. Attachments – Error codes</h1>
+<p>
+Sometimes a specific functionality does not work because certain information is missing  
+in the settings. Below you will find the most common error codes and their explanations.
+</p>
+
+<h2 id="6_1">6.1. General</h2>
+<p>
+<b>Shipping method not recognized by the app. Export the shipment on the order detail page:</b>  
+No shipping method was selected for this order.  
+Check whether the <span class="nice">Default export settings</span> have been saved correctly,  
+or open the order in the PostNL app and adjust the shipping method under  
+<span class="nice">Change shipping method or number of parcels</span>.
+</p>
+
+<p>
+<b>No labels will be printed; there is likely an issue with your settings:</b>  
+Usually appears together with the error above.  
+This means a label cannot be generated because required information is missing,  
+often under <span class="nice">Default export settings</span>.
+</p>
+
+<p>
+<b>No export settings found for the shipping method. Add them under Settings:</b>  
+A reminder that some required settings have not yet been configured.
+</p>
+
+<p>
+<b>API key is not valid:</b>  
+The entered API key is invalid or incorrect.  
+The merchant should verify and re‑enter their API key.
+</p>
+
+<p>
+<b>For the Netherlands, the insurance limit is €5500.00 — please comply:</b>  
+The insured value entered for a shipment with increased liability exceeds the allowed limit.
+</p>
+
+<p>
+<b>For Belgium, the insurance limit is €500.00 — please comply:</b>  
+The insured value entered for a shipment with increased liability exceeds the allowed limit in Belgium.
+</p>
+
+<h2 id="6_2">6.2. Pick‑up (3_ _)</h2>
+<p>
+    <b>310 – No pick‑up locations found:</b><br>
+    When the customer chooses to pick up the parcel at a PostNL point, they must select a PostNL pick‑up point  
+    on the Thank‑you page.  
+    This message indicates that no PostNL point was found.  
+    Ask the customer to check their postal code and search again for a PostNL point.
+</p>
+
+<p>
+    <b>320 – No pick‑up location selected for this order:</b><br>
+    The customer will receive a reminder email 30 minutes after placing the order  
+    to select a PostNL pick‑up point.
+</p>
+
+
+<h2 id="6_3">6.3. Return (4_ _)</h2>
+<p>
+    <b>410 – Cannot create return shipment for this order:</b><br>
+    The country from which the return shipment originates is not valid for return shipments.
+</p>
+
+<p>
+    <b>420 – Cannot create return shipment for this order:</b><br>
+    The destination country of the return shipment is not valid for return shipments.
+</p>
+
+<p>
+    <b>430 – A return label cannot be requested when no outbound shipment exists for this order:</b><br>
+    If an order has no assigned shipping method, no return label can be created.  
+    A shipping method must be selected first.
+</p>
+
+<p>
+    <b>440 – No email address found for this order:</b><br>
+    Shopify did not provide an email address for the customer, so the return label cannot be sent.
+</p>
+
+<p>
+    <b>450 – The reply number (NL) or street (BE) is required to create a return shipment:</b><br>
+    The reply number or street name for the return address is missing in the settings.
+</p>
+
+
+<h2 id="6_4">6.4. Validation of product codes (5_ _)</h2>
+<p>
+    <b>510 – No export settings found for the shipping rate. Add them under Settings:</b><br>
+    There is no <span class="nice">Default export setting</span> configured for this shipping rate.  
+    A default export setting must be selected before labels can be downloaded.  
+    Alternatively, open the order in the PostNL app and adjust the shipping method under  
+    <span class="nice">Change shipping method or number of parcels</span>.
+</p>
+
+<p>
+    <b>520 – The shipping rate is not configured to ship with PostNL:</b><br>
+    The merchant chose not to use a PostNL shipping method for this shipping rate.
+</p>
+
+
+<h2 id="6_5">6.5. Request (6_ _)</h2>
+<p>
+    <b>600 – General errors not specifically captured:</b>
+    <ul>
+        <li>An issue occurred while saving.</li>
+        <li>An issue occurred while generating the label(s).</li>
+        <li>An issue occurred while printing the label(s).</li>
+        <li>An issue occurred while requesting a return label.</li>
+        <li>An issue occurred while creating a draft.</li>
+    </ul>
+</p>
+
+<p>
+    <b>610 – PostNL returned a general error:</b><br>
+    The error message returned by PostNL will be shown here.
+</p>
+
+<p>
+    <b>620 – PostNL returned an error when generating the label:</b><br>
+    The specific error message from PostNL will be shown here.
+</p>
+
+<i>
+<p>
+    <span class="nice"><b>Example:</b></span>
+</p>
+<p>
+    <b>620: Countries in receiver and sender address not allowed together for this product.</b>
+</p>
+<p>
+    When creating an additional parcel, a shipping option must be selected.  
+    If the merchant is located in Belgium and selects an NL‑NL shipping option, the request will fail.  
+    The same applies if a Dutch merchant selects a BE‑BE shipping method.  
+    Always ensure that the first part of the shipping method (BE‑BE, NL‑NL, BE‑NL, NL‑BE)  
+    represents the country where the webshop is located,  
+    and the second part represents the destination country.
+</p>
+</i>
+
+
+<h2 id="6_6">6.6. Barcodes (7_ _)</h2>
+<p>
+    <b>710 – Cannot create barcode:</b><br>
+    A barcode could not be generated for shipments within the Netherlands or Belgium.  
+    This may be caused by an incorrect customer number or customer code.
+</p>
+
+<p>
+    <b>720 – Cannot create international barcode:</b><br>
+    A barcode could not be generated for shipments within the EU or outside the EU.
+</p>
+
+
+<h2 id="6_7">6.7. Cover (8_ _)</h2>
+<p>
+    <b>810 – Enter a value to insure the alternative shipment:</b><br>
+    An insured value could not be created because the amount was not provided.
+</p>
+
+
+<h2 id="6_8">6.8. International (9_ _)</h2>
+<p>
+    <b>910 – There must be a minimum of 1 order line and a maximum of 5 order lines in the order:</b><br>
+    For an international shipment, the order must contain at least 1 and no more than 5 order lines.  
+    Each line represents one product, although each line may contain multiple units of that product.
+</p>
