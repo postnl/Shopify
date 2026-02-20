@@ -40,3 +40,7 @@
     border-radius: 0.3rem;
 }
 ``
+/* Als er al tekst in de <li> staat, toon dan geen ::before label */
+.languagepicker li:not(:empty)::before {
+  content: "" !important;
+}
