@@ -2,7 +2,7 @@
 .languagepicker {
     background-color: transparent;
     display: inline-block;
-    height: 41px;
+    max-height: 41px;
     margin: 20px;
     overflow: hidden;
     transition: all .3s ease;
@@ -26,7 +26,7 @@
 }
 
 .languagepicker:hover {
-    height: auto;
+    max-height: 500px;
     background-color: #EEE;
 }
 
