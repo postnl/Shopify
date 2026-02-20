@@ -61,3 +61,12 @@
 .languagepicker > li + li {
     border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
+
+/* --- HARD OVERRIDE: voorkom dubbele labels door pseudo-elements --- */
+#languagepicker li::before,
+#languagepicker li::after,
+.languagepicker li::before,
+.languagepicker li::after {
+  content: none !important;
+  display: none !important;
+}
