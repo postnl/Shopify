@@ -6,7 +6,7 @@
     background-color: transparent;
     display: inline-block;
 
-    /* Ingeklapte staat */
+    /* Ingeklapt */
     max-height: 41px;
     overflow: hidden;
 
@@ -16,13 +16,12 @@
 
     transition: max-height .3s ease, background-color .3s ease;
 
-    /* Positie rechtsboven */
+    /* Positie */
     position: absolute;
     right: 30px;
     top: 30px;
     z-index: 300;
 
-    /* Optional: beter klikgedrag */
     border-radius: 0.4rem;
 }
 
@@ -32,24 +31,43 @@
     cursor: pointer;
     display: block;
     white-space: nowrap;
-
     color: #000 !important;
     font-weight: bold;
-
-    /* Zorgt dat de regelhoogte consistent blijft */
     line-height: 1.2;
+
+    /* 🔑 De truc: verberg eventuele echte tekst (voorkomt dubbels) */
+    font-size: 0;
 }
 
-/* Verberg eventuele img’s mocht er toch ergens nog eentje in staan */
+/* Als er binnen de li nog een <a> of <span> staat: ook verbergen */
+.languagepicker li * {
+    font-size: 0 !important;
+}
+
+/* Geen vlag-icoontjes */
 .languagepicker img {
     display: none !important;
 }
 
-/* Dropdown open on hover */
+/* Labels komen voortaan ALLEEN uit ::before */
+.languagepicker li::before {
+    font-size: 16px;      /* zet hier je gewenste tekstgrootte */
+    line-height: 1.2;
+    color: #000;
+}
+
+/* Tekst per taal */
+.languagepicker li#NL::before { content: "Nederlands"; }
+.languagepicker li#EN::before { content: "English"; }
+
+/* Dropdown open */
 .languagepicker:hover {
-    max-height: 500px; /* genoeg voor dropdown */
+    max-height: 500px;
     background-color: #EEE;
 }
 
-/* Hover state item */
+/* Hover item */
 .languagepicker > li:hover {
+    border: 1px rgba(255, 255, 255, 1) solid;
+    border-radius: 0.3rem;
+}
