@@ -21,6 +21,8 @@
     cursor: pointer;
     display: block;
     white-space: nowrap;
+    color: #000;
+    font-weight: bold;
 }
 
 .languagepicker:hover {
