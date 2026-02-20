@@ -30,6 +30,7 @@ $(document).on("click", ".languagepicker > li", function () {
     location.search = params.toString();
     window.history.replaceState( {} , window.title, location);
 
-    $(this).prependTo('ul.languagepicker'); /* set the selected language at first option */
+    // DON'T move the element - just load the content
+    // $(this).prependTo('ul.languagepicker'); /* REMOVED THIS LINE */
     $(".all-content").load("language/" + lowerCase + "_" + clickedLanguage + ".html");
 });
