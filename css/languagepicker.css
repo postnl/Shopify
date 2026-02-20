@@ -34,3 +34,8 @@
     border: 1px rgba(255, 255, 255, 1) solid;
     border-radius: 0.3rem;
 }
+
+/* Verberg items zonder inhoud */
+.languagepicker li:empty {
+    display: none !important;
+}
