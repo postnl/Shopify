@@ -1,4 +1,4 @@
-/* language picker*/
+/* language picker */
 .languagepicker {
     background-color: transparent;
     display: inline-block;
@@ -25,6 +25,11 @@
     font-weight: bold;
 }
 
+/* ✅ Labels altijd tonen, ook als JS de <li> leeg maakt */
+.languagepicker li#NL::before { content: "Nederlands"; }
+.languagepicker li#EN::before { content: "English"; }
+
+/* dropdown open */
 .languagepicker:hover {
     max-height: 500px;
     background-color: #EEE;
@@ -34,8 +39,4 @@
     border: 1px rgba(255, 255, 255, 1) solid;
     border-radius: 0.3rem;
 }
-
-/* Verberg items zonder inhoud */
-.languagepicker li:empty {
-    display: none !important;
-}
+``
